@@ -76,7 +76,8 @@ body{
   margin-bottom: 3.75rem;
 }
 
-.nosotros-page-title{
+.nosotros-page-title,
+.locales-title{
   font-family: "Playfair Display", serif;
   font-weight: 700;
   letter-spacing: .8px;
@@ -85,7 +86,8 @@ body{
   margin: 0;
 }
 
-.nosotros-page-subtitle{
+.nosotros-page-subtitle,
+.locales-subtitle{
   color: rgba(0,0,0,0.65);
   font-size: clamp(.95rem, 1.5vw, 1.05rem);
   max-width: 65ch;
@@ -112,16 +114,17 @@ body{
   margin-bottom: 1rem;
 }
 
-/* ===== Botón ===== */
+/* ===== Botones ===== */
 .btn-perita{
   border: 0;
   background: var(--perita-blue);
   color: var(--perita-white);
   font-weight: 600;
   font-size: 100%;
-  border-radius: 999px;
+  border-radius: 12px;
   box-shadow: 0 14px 28px rgba(0,0,0,.14);
   transition: transform .15s ease, background-color .15s ease, color .15s ease;
+  padding: 0.55rem
 }
 .btn-perita:hover{
   background: var(--perita-blue-dark);
@@ -132,7 +135,21 @@ body{
   box-shadow: 0 0 0 .25rem rgba(11, 74, 162, .25);
 }
 
-/* ===== Imagen ===== */
+.btn-outline-perita{
+  border: 2px solid var(--perita-blue);
+  color: var(--perita-blue);
+  background: #fff;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: transform .15s ease, background-color .15s ease, color .15s ease;
+}
+.btn-outline-perita:hover{
+  background: var(--perita-blue);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ===== Imagen principal ===== */
 .nosotros-img-card{
   border-radius: 1.25rem;
   overflow: hidden;
@@ -149,9 +166,118 @@ body{
   display: block;
 }
 
+/* ===== NUESTROS LOCALES ===== */
+.locales-section{
+  background: #f7f9fc;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+
+.local-card{
+  background: #fff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,.10);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.local-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.14);
+}
+
+.local-card-img{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.local-card-body{
+  padding: 1.5rem;
+}
+
+.local-card-title{
+  font-family: "Playfair Display", serif;
+  color: var(--perita-blue-dark);
+  font-weight: 700;
+  font-size: 1.45rem;
+  margin-bottom: .75rem;
+}
+
+.local-card-text{
+  color: rgba(0,0,0,.70);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.local-card-info{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+
+.local-card-info li{
+  display: flex;
+  gap: .65rem;
+  align-items: flex-start;
+  color: rgba(0,0,0,.72);
+  margin-bottom: .55rem;
+  line-height: 1.45;
+}
+
+.local-card-info i{
+  color: var(--perita-blue);
+  min-width: 18px;
+  margin-top: .15rem;
+}
+
+.local-card-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.local-card-actions .btn{
+  padding: .65rem 1.1rem;
+  font-size: .92rem;
+}
+
 /* ===== FOOTER ===== */
 .footer-perita{
   background: var(--perita-blue-dark);
   color: rgba(255,255,255,0.92);
   font-size: .95rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 767.98px){
+  .nosotros-header{
+    margin-bottom: 2rem;
+  }
+
+  .nosotros-parrafo{
+    text-align: left;
+  }
+
+  .local-card-img{
+    height: 210px;
+  }
+
+  .local-card-actions{
+    flex-direction: column;
+  }
+
+  .local-card-actions .btn{
+    width: 100%;
+  }
+}
+
+.admin-link{
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  font-size: .85rem;
+}
+
+.admin-link:hover{
+  color: #fff;
 }

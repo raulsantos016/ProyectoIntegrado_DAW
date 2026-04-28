@@ -196,9 +196,10 @@ body{
   color: var(--perita-white);
   font-weight: 600;
   font-size: 100%;
-  border-radius: 999px;
+  border-radius: 12px;
   box-shadow: 0 14px 28px rgba(0,0,0,.14);
   transition: transform .15s ease, background-color .15s ease, color .15s ease;
+  padding: 0.55rem
 }
 
 .btn-perita:hover{
@@ -258,4 +259,14 @@ body{
   main, header, footer{
     overflow: visible !important;
   }
+}
+
+.admin-link{
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  font-size: .85rem;
+}
+
+.admin-link:hover{
+  color: #fff;
 }

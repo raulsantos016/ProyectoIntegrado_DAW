@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="./assets/css/locales.css" />
+
+    <title>Bar Perita: sevillanía en barra | Reservas</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav id="navbarPerita" class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="./inicio.html" aria-label="Bar Perita">
+                <img src="./assets/images/logo.png" alt="Logo Bar Perita" class="perita-logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#peritaNav"
+                aria-controls="peritaNav" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="peritaNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link perita-link" href="./inicio.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link perita-link" href="./nosotros.html">QUIÉNES SOMOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link perita-link" href="./productos.html">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link perita-link" href="./carta.html">CARTA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link perita-link" href="./contacto.html">CONTACTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link perita-link perita-active" href="./locales.html">RESERVAS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <main class="flex-grow-1 locales-main">
+        <section class="locales-section py-4 py-lg-5">
+            <div class="container">
+
+                <!-- CABECERA -->
+                <div class="text-center locales-header mb-5">
+                    <h1 class="locales-page-title mb-2">RESERVA TU MESA</h1>
+                    <p class="locales-page-subtitle mb-0">
+                        Elige el local de Bar Perita donde quieres realizar tu reserva.
+                    </p>
+                </div>
+
+                <!-- AVISO -->
+                <div class="locales-aviso mx-auto mb-5">
+                    <p class="mb-0">
+                        Selecciona uno de nuestros locales. Después accederás al formulario de reserva correspondiente,
+                        donde podrás indicar fecha, turno y número de personas.
+                    </p>
+                </div>
+
+                <!-- CARDS LOCALES -->
+                <div class="row g-4 justify-content-center">
+
+                    <!-- LOCAL 1 -->
+                    <div class="col-12 col-md-6 col-xl-5">
+                        <article class="local-card h-100">
+                            <img src="./assets/images/local1.png" alt="Bar Perita San Julián"
+                                class="local-card-img">
+
+                            <div class="local-card-body">
+                                <span class="local-zona">Casco Antiguo</span>
+
+                                <h2 class="local-title">Bar Perita San Julián</h2>
+
+                                <p class="local-text">
+                                    Nuestro primer local, situado en uno de los barrios con más esencia de Sevilla.
+                                    Perfecto para tapear, comer o cenar en un ambiente cercano.
+                                </p>
+
+                                <ul class="local-info">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Plaza de San Julián · Sevilla
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone"></i>
+                                        600 123 456
+                                    </li>
+                                    <li>
+                                        <i class="far fa-clock"></i>
+                                        Lunes a Domingo: 12:00 – 00:00
+                                    </li>
+                                </ul>
+
+                                <a href="./reserva.html?idLocal=1" class="btn btn-perita w-100">
+                                    RESERVAR EN ESTE LOCAL
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- LOCAL 2 -->
+                    <div class="col-12 col-md-6 col-xl-5">
+                        <article class="local-card h-100">
+                            <img src="./assets/images/local2.png" alt="Bar Perita Triana" class="local-card-img">
+
+                            <div class="local-card-body">
+                                <span class="local-zona">Triana</span>
+
+                                <h2 class="local-title">Bar Perita Triana</h2>
+
+                                <p class="local-text">
+                                    Una nueva parada para disfrutar de la misma cocina, el mismo producto y el ambiente
+                                    sevillano que define a Bar Perita.
+                                </p>
+
+                                <ul class="local-info">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Calle Betis · Sevilla
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone"></i>
+                                        600 987 654
+                                    </li>
+                                    <li>
+                                        <i class="far fa-clock"></i>
+                                        Lunes a Domingo: 12:00 – 00:00
+                                    </li>
+                                </ul>
+
+                                <a href="./reserva.html?idLocal=2" class="btn btn-perita w-100">
+                                    RESERVAR EN ESTE LOCAL
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <!-- NOTA FINAL -->
+                <div class="text-center mt-5">
+                    <p class="locales-nota mb-0">
+                        Para cancelar una reserva, contacta telefónicamente con el local correspondiente.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footerPerita" class="footer-perita">
+        <div class="container">
+            <div class="py-3 text-center">
+                © 2026 Bar Perita · Todos los derechos reservados · 
+                 <a href="./admin/login.html" class="admin-link">Administración</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

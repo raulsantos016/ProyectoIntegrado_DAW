@@ -60,9 +60,11 @@ body{
     padding-top: .75rem;
     padding-bottom: .75rem;
   }
+
   .perita-link{
     padding: .8rem 1rem !important;
   }
+
   .perita-active::after{
     left: 16px;
     right: 16px;
@@ -70,12 +72,25 @@ body{
   }
 }
 
-/* ===== CONTACTO ===== */
-.contacto-header{
+/* ===== MAIN ===== */
+.carta-main{
+  flex: 1;
+}
+
+.carta-section{
+  background:
+    linear-gradient(rgba(255,255,255,.94), rgba(255,255,255,.94)),
+    url("../images/carta.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===== HEADER ===== */
+.carta-header{
   padding-top: .25rem;
 }
 
-.contacto-page-title{
+.carta-page-title{
   font-family: "Playfair Display", serif;
   font-weight: 700;
   letter-spacing: .8px;
@@ -84,104 +99,106 @@ body{
   margin: 0;
 }
 
-.contacto-page-subtitle{
+.carta-page-subtitle{
   color: rgba(0,0,0,0.65);
   font-size: clamp(.95rem, 1.5vw, 1.05rem);
   max-width: 65ch;
   margin: 0 auto;
 }
 
-.contacto-title{
+.carta-intro{
+  max-width: 780px;
+}
+
+.carta-intro p{
+  color: rgba(0,0,0,.72);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ===== CARTA ===== */
+.carta-card{
+  background: rgba(255,255,255,.96);
+  border: 1px solid rgba(11, 74, 162, .10);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,.10);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.carta-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.14);
+}
+
+.carta-card-header{
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.carta-card-header i{
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: rgba(11, 74, 162, .09);
+  color: var(--perita-blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.carta-card-header h2{
   font-family: "Playfair Display", serif;
   font-weight: 700;
   color: var(--perita-blue-dark);
-  letter-spacing: .3px;
-  font-size: 1.6rem;
-  margin-bottom: .35rem;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  margin: 0;
 }
 
-.contacto-text{
-  color: rgba(0,0,0,0.7);
+.carta-item{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px dashed rgba(0,0,0,.12);
+}
+
+.carta-item:last-child{
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.carta-item h3{
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: .25rem;
+}
+
+.carta-item p{
+  color: rgba(0,0,0,.62);
+  line-height: 1.5;
+  margin: 0;
+  font-size: .92rem;
+}
+
+.carta-item span{
+  color: var(--perita-blue-dark);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.carta-aviso{
+  color: rgba(0,0,0,.62);
   margin-bottom: 1rem;
 }
 
-.contacto-success{
-  text-align: center;
-  font-weight: 600;
-  color: var(--perita-blue-dark);
-}
-
-.contacto-left{
-  margin-top: 3.5rem;
-}
-
-/* Mapa */
-.mapa{
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 7px 15px rgba(0,0,0,.12);
-}
-
-.mapa iframe{
-  display: block;
-}
-
-/* Info */
-.contacto-info{
-  background: rgba(11, 74, 162, 0.04);
-  border: 1px solid rgba(11, 74, 162, 0.10);
-  border-radius: 1rem;
-  padding: 1rem 1rem .9rem;
-}
-
-.contacto-info p{
-  margin: 0 0 .55rem;
-  color: rgba(0,0,0,0.75);
-  display: flex;
-  align-items: center;
-  gap: .55rem;
-}
-
-.contacto-info i{
-  color: var(--perita-blue);
-  width: 18px;
-  text-align: center;
-}
-
-.contacto-aviso{
-  margin-top: .25rem;
-  font-weight: 600;
-  color: rgba(0,0,0,0.75);
-}
-
-/* Card formulario */
-.contacto-card{
-  border-radius: 1.25rem;
-}
-
-.contacto-form-title{
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  color: var(--perita-blue-dark);
-  margin-bottom: .75rem;
-}
-
-.contacto-note{
-  color: rgba(0,0,0,0.55);
-  font-size: .9rem;
-}
-
-.form-control{
-  border-radius: .9rem;
-  padding: .8rem 1rem;
-  border: 1px solid rgba(0,0,0,0.15);
-}
-
-.form-control:focus{
-  border-color: rgba(11, 74, 162, 0.45);
-  box-shadow: 0 0 0 .25rem rgba(11, 74, 162, .15);
-}
-
+/* ===== BOTÓN ===== */
 .btn-perita{
   border: 0;
   background: var(--perita-blue);
@@ -204,39 +221,27 @@ body{
   box-shadow: 0 0 0 .25rem rgba(11, 74, 162, .25);
 }
 
-.btn-perita-outline{
-  border: 2px solid var(--perita-blue);
-  background: var(--perita-white);
-  color: var(--perita-blue-dark);
-  font-weight: 600;
-  font-size: 100%;
-  border-radius: 999px;
-  transition: transform .15s ease, background-color .15s ease, color .15s ease, border-color .15s ease;
-}
-
-.btn-perita-outline:hover{
-  background: rgba(11, 74, 162, 0.08);
-  border-color: var(--perita-blue-dark);
-  color: var(--perita-blue-dark);
-  transform: translateY(-1px);
-}
-
-/* Igualar tamaño botones */
-.btn-perita,
-.btn-perita-outline{
-  min-height: 46px;
-  padding: 0 1.75rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
 /* ===== FOOTER ===== */
 .footer-perita{
   background: var(--perita-blue-dark);
   color: rgba(255,255,255,0.92);
   font-size: .95rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 575.98px){
+  .carta-card{
+    padding: 1.2rem;
+  }
+
+  .carta-item{
+    flex-direction: column;
+    gap: .35rem;
+  }
+
+  .carta-item span{
+    align-self: flex-start;
+  }
 }
 
 .admin-link{
