@@ -27,18 +27,15 @@
     <!-- NAVBAR -->
     <nav id="navbarPerita" class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
         <div class="container">
-            <!-- Logo -->
             <a class="navbar-brand d-flex align-items-center" href="./inicio.html" aria-label="Bar Perita">
                 <img src="./assets/images/logo.png" alt="Logo Bar Perita" class="perita-logo">
             </a>
 
-            <!-- Hamburguesa (XS) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#peritaNav"
                 aria-controls="peritaNav" aria-expanded="false" aria-label="Abrir menú">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Links -->
             <div class="collapse navbar-collapse" id="peritaNav">
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
                     <li class="nav-item">
@@ -65,107 +62,223 @@
     </nav>
 
     <!-- CONTENIDO -->
-    <main class="flex-grow-1">
+    <main class="flex-grow-1 contacto-main">
+
         <section class="contacto-section py-4 py-lg-5">
             <div class="container">
 
-                <!-- Título + frase -->
-                <div class="text-center contacto-header mb-4">
+                <!-- CABECERA -->
+                <div class="text-center contacto-header mb-5">
                     <h1 class="contacto-page-title mb-2">UBICACIÓN Y CONTACTO</h1>
+                    <p class="contacto-page-subtitle mb-0">
+                        Encuentra tu Bar Perita más cercano o escríbenos para cualquier consulta.
+                    </p>
                 </div>
 
-                <div class="row g-4 align-items-start">
-                    <!-- Columna izquierda -->
-                    <div class="col-12 col-lg-6 contacto-left">
-                        <p class="contacto-text">
-                            En uno de los barrios con más esencia de Sevilla, Bar Perita ofrece un espacio
-                            acogedor donde disfrutar del sabor de siempre.
+                <!-- NUESTROS LOCALES -->
+                <section class="locales-contacto-section mb-5">
+                    <div class="text-center locales-contacto-header mb-4">
+                        <h2 class="contacto-title mb-2">NUESTROS LOCALES</h2>
+                        <p class="contacto-subtitle mb-0">
+                            Consulta la ubicación, teléfono y horario de cada local.
                         </p>
-
-                        <!-- Mapa -->
-                        <div class="mapa mb-3">
-                            <iframe
-                                src="https://www.google.com/maps?q=Plaza%20de%20San%20Julian%2C%20C.%20San%20Hermenegildo%2C%20Sevilla&output=embed"
-                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-                            </iframe>
-
-                        </div>
-
-                        <!-- Info -->
-                        <div class="contacto-info">
-                            <p><i class="fas fa-map-marker-alt"></i> Plaza de San Julián · Casco Antiguo (Sevilla)</p>
-                            <p><i class="fas fa-phone"></i> 600 123 456</p>
-                            <p><i class="fab fa-instagram"></i> @barperita</p>
-                            <p><i class="far fa-clock"></i> Lunes a Domingo: 12:00 – 00:00</p>
-                            <p class="contacto-aviso mb-0">
-                                Para reservas y consultas, llámanos o escríbenos por Instagram.
-                            </p>
-                        </div>
                     </div>
 
-                    <!-- Columna derecha: formulario -->
-                    <div class="col-12 col-lg-6">
-                        <div class="card contacto-card shadow-sm border-0">
-                            <div class="card-body p-4">
+                    <div class="row g-4 justify-content-center">
 
-                                <h2 class="contacto-form-title mb-3">Escríbenos</h2>
+                        <!-- LOCAL 1 -->
+                        <div class="col-12 col-md-6 col-xl-5">
+                            <article class="local-contacto-card h-100">
 
-                                <!-- Alert éxito (oculto por defecto) -->
-                                <div id="contactoAlert" class="alert alert-success d-none" role="alert">
-                                    ✅ Mensaje enviado correctamente. ¡Gracias por contactar con Bar Perita!
+                                <div class="local-contacto-mapa">
+                                    <iframe
+                                        src="https://www.google.com/maps?q=Plaza%20de%20San%20Julian%2C%20Sevilla&output=embed"
+                                        loading="lazy" allowfullscreen>
+                                    </iframe>
                                 </div>
 
-                                <form id="contactoForm" novalidate>
-                                    <div class="mb-3">
-                                        <label for="nombre" class="form-label">Nombre</label>
-                                        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre"
-                                            required>
-                                        <div class="invalid-feedback">Por favor, escribe tu nombre.</div>
-                                    </div>
+                                <div class="local-contacto-body">
+                                    <span class="local-contacto-zona">Casco Antiguo</span>
 
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Correo</label>
-                                        <input type="email" class="form-control" id="email"
-                                            placeholder="tunombre@gmail.com" required>
-                                        <div class="invalid-feedback">Por favor, escribe un correo válido.</div>
-                                    </div>
+                                    <h3 class="local-contacto-title">
+                                        Bar Perita San Julián
+                                    </h3>
 
-                                    <div class="mb-3">
-                                        <label for="mensaje" class="form-label">Mensaje</label>
-                                        <textarea class="form-control" id="mensaje" rows="5"
-                                            placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
-                                        <div class="invalid-feedback">Por favor, escribe tu mensaje.</div>
-                                    </div>
+                                    <ul class="local-contacto-info">
+                                        <li>
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Plaza de San Julián · Sevilla
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-phone"></i>
+                                            600 123 456
+                                        </li>
+                                        <li>
+                                            <i class="far fa-clock"></i>
+                                            Lunes a Domingo: 12:00 – 00:00
+                                        </li>
+                                    </ul>
 
-                                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                                        <button type="submit" class="btn btn-perita btn-lg px-4">
-                                            ENVIAR
-                                        </button>
-                                        <button type="reset" class="btn btn-perita-outline btn-lg px-4">
-                                            LIMPIAR
-                                        </button>
-                                    </div>
-                                    <!-- Mensaje de confirmación -->
-                                    <p id="contactoMensaje" class="contacto-success mt-3 d-none">
-                                        ¡Gracias por contactar con Bar Perita!
-                                    </p>
-                                </form>
+                                    <a href="./reservas.html?idLocal=1" class="btn btn-perita w-100">
+                                        RESERVAR EN ESTE LOCAL
+                                    </a>
+                                </div>
 
+                            </article>
+                        </div>
+
+                        <!-- LOCAL 2 -->
+                        <div class="col-12 col-md-6 col-xl-5">
+                            <article class="local-contacto-card h-100">
+
+                                <div class="local-contacto-mapa">
+                                    <iframe
+                                        src="https://www.google.com/maps?q=Triana%20Sevilla&output=embed"
+                                        loading="lazy" allowfullscreen>
+                                    </iframe>
+                                </div>
+
+                                <div class="local-contacto-body">
+                                    <span class="local-contacto-zona">Triana</span>
+
+                                    <h3 class="local-contacto-title">
+                                        Bar Perita Triana
+                                    </h3>
+
+                                    <ul class="local-contacto-info">
+                                        <li>
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Calle Betis · Sevilla
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-phone"></i>
+                                            600 987 654
+                                        </li>
+                                        <li>
+                                            <i class="far fa-clock"></i>
+                                            Lunes a Domingo: 12:00 – 00:00
+                                        </li>
+                                    </ul>
+
+                                    <a href="./reservas.html?idLocal=2" class="btn btn-perita w-100">
+                                        RESERVAR EN ESTE LOCAL
+                                    </a>
+                                </div>
+
+                            </article>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ESCRÍBENOS -->
+                <section class="mensaje-section">
+                    <div class="text-center mensaje-header mb-4">
+                        <h2 class="contacto-title mb-2">ESCRÍBENOS</h2>
+                        <p class="contacto-subtitle mb-0">
+                            Envíanos tu consulta. Puedes seleccionar un local concreto o dejarlo como consulta general.
+                        </p>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8 col-xl-7">
+
+                            <div class="card mensaje-card border-0 shadow-sm">
+                                <div class="card-body p-4 p-lg-5">
+
+                                    <form id="contactoForm" action="#" method="post" novalidate>
+
+                                        <div class="row g-3">
+
+                                            <div class="col-12 col-md-6">
+                                                <label for="nombreMensaje" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="nombreMensaje"
+                                                    name="nombreMensaje" placeholder="Tu nombre">
+                                            </div>
+
+                                            <div class="col-12 col-md-6">
+                                                <label for="correoMensaje" class="form-label">Correo</label>
+                                                <input type="email" class="form-control" id="correoMensaje"
+                                                    name="correoMensaje" placeholder="tunombre@gmail.com">
+                                                <div class="invalid-feedback">
+                                                    Introduce un correo válido.
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-md-6">
+                                                <label for="telefonoMensaje" class="form-label">Teléfono</label>
+                                                <input type="tel" class="form-control" id="telefonoMensaje"
+                                                    name="telefonoMensaje" placeholder="600 123 456">
+                                            </div>
+
+                                            <div class="col-12 col-md-6">
+                                                <label for="idLocalFK" class="form-label">Consulta relacionada con</label>
+                                                <select class="form-select" id="idLocalFK" name="idLocalFK">
+                                                    <option value="">Consulta general sobre Bar Perita</option>
+                                                    <option value="1">Bar Perita San Julián</option>
+                                                    <option value="2">Bar Perita Triana</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="asuntoMensaje" class="form-label">Asunto</label>
+                                                <input type="text" class="form-control" id="asuntoMensaje"
+                                                    name="asuntoMensaje" placeholder="Motivo de la consulta">
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="mensajeMensaje" class="form-label">Mensaje *</label>
+                                                <textarea class="form-control" id="mensajeMensaje" name="mensajeMensaje"
+                                                    rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+                                                <div class="invalid-feedback">
+                                                    Por favor, escribe tu mensaje.
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="mensaje-aviso">
+                                                    <i class="fas fa-circle-info"></i>
+                                                    Para poder responderte, recomendamos indicar al menos un dato de
+                                                    contacto: nombre, correo o teléfono.
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mt-4">
+                                            <button type="submit" class="btn btn-perita btn-lg px-4">
+                                                ENVIAR MENSAJE
+                                            </button>
+
+                                            <button type="reset" class="btn btn-perita-outline btn-lg px-4">
+                                                LIMPIAR
+                                            </button>
+                                        </div>
+
+                                        <p id="contactoMensaje" class="contacto-success mt-3 d-none">
+                                            ¡Gracias por escribirnos! Tu mensaje ha sido registrado correctamente.
+                                        </p>
+
+                                    </form>
+
+                                </div>
                             </div>
+
                         </div>
                     </div>
-                </div>
+                </section>
 
             </div>
         </section>
+
     </main>
 
     <!-- FOOTER -->
     <footer id="footerPerita" class="footer-perita">
         <div class="container">
             <div class="py-3 text-center">
-                © 2026 Bar Perita · Todos los derechos reservados · 
-                 <a href="./admin/login.html" class="admin-link">Administración</a>
+                © 2026 Bar Perita · Todos los derechos reservados ·
+                <a href="./admin/login.html" class="admin-link">Administración</a>
             </div>
         </div>
     </footer>
@@ -173,13 +286,11 @@
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JS Formulario: validar, mostrar mensaje y resetear -->
+    <!-- JS Formulario -->
     <script>
         (function () {
             const form = document.getElementById('contactoForm');
             const mensaje = document.getElementById('contactoMensaje');
-
-            let reseteoPorEnvio = false;
 
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
@@ -189,25 +300,13 @@
                     return;
                 }
 
-                // Mostrar mensaje
                 mensaje.classList.remove('d-none');
-
-                // Marcar que el reset viene del envío
-                reseteoPorEnvio = true;
-
-                // Resetear formulario
                 form.reset();
                 form.classList.remove('was-validated');
-
-                // Volver a permitir que el botón "LIMPIAR" sí oculte el mensaje
-                reseteoPorEnvio = false;
             });
 
-            // Solo ocultar el mensaje cuando el reset lo hace el usuario (botón LIMPIAR)
             form.addEventListener('reset', function () {
-                if (!reseteoPorEnvio) {
-                    mensaje.classList.add('d-none');
-                }
+                mensaje.classList.add('d-none');
                 form.classList.remove('was-validated');
             });
         })();

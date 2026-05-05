@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/localesAdmin.css" />
+
+    <title>Bar Perita | Administración de locales</title>
+</head>
+
+<body>
+
+    <main class="admin-page">
+
+        <div class="admin-container">
+
+            <!-- CABECERA -->
+            <header class="admin-header">
+                <div>
+                    <h1 class="admin-title">Gestión de locales</h1>
+                    <p class="admin-subtitle">
+                        Añade, modifica o elimina los locales de Bar Perita.
+                    </p>
+                </div>
+
+                <div class="admin-header-actions">
+                    <a href="./panel.html" class="btn btn-admin-light">
+                        <i class="fas fa-arrow-left"></i>
+                        Panel
+                    </a>
+                    <a href="../inicio.html" class="btn btn-admin-outline">
+                        Volver a la web
+                    </a>
+                </div>
+            </header>
+
+            <!-- ACCIONES -->
+            <section class="admin-card mb-4">
+                <div class="acciones-superiores">
+                    <div>
+                        <h2 class="section-title mb-1">Locales registrados</h2>
+                        <p class="section-subtitle mb-0">
+                            Datos de ejemplo. Más adelante se cargarán desde la base de datos.
+                        </p>
+                    </div>
+
+                    <button type="button" class="btn btn-admin-success" data-bs-toggle="modal"
+                        data-bs-target="#modalLocal">
+                        <i class="fas fa-plus"></i>
+                        AÑADIR LOCAL
+                    </button>
+                </div>
+            </section>
+
+            <!-- TABLA -->
+            <section class="admin-card">
+                <div class="tabla-scroll">
+                    <table class="table locales-table align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Imagen</th>
+                                <th>Título</th>
+                                <th>Zona</th>
+                                <th>Dirección</th>
+                                <th>Teléfono</th>
+                                <th>Mesas</th>
+                                <th>Horario</th>
+                                <th>Mapa</th>
+                                <th>Descripción</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <img src="../assets/images/local1.png" alt="San Julián"
+                                        class="tabla-img">
+                                </td>
+                                <td>Bar Perita San Julián</td>
+                                <td>Casco Antiguo</td>
+                                <td>Plaza de San Julián · Sevilla</td>
+                                <td>600 123 456</td>
+                                <td>12</td>
+                                <td>Lunes a Domingo: 12:00 – 00:00</td>
+                                <td>
+                                    <a href="#" class="map-link">Ver mapa</a>
+                                </td>
+                                <td class="descripcion-celda">
+                                    Nuestro primer local, situado en uno de los barrios con más esencia de Sevilla.
+                                </td>
+                                <td>
+                                    <div class="acciones">
+                                        <button class="btn btn-edit" data-bs-toggle="modal"
+                                            data-bs-target="#modalLocal">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button class="btn btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <img src="../assets/images/local2.png" alt="Triana" class="tabla-img">
+                                </td>
+                                <td>Bar Perita Triana</td>
+                                <td>Triana</td>
+                                <td>Calle Betis · Sevilla</td>
+                                <td>600 987 654</td>
+                                <td>10</td>
+                                <td>Lunes a Domingo: 12:00 – 00:00</td>
+                                <td>
+                                    <a href="#" class="map-link">Ver mapa</a>
+                                </td>
+                                <td class="descripcion-celda">
+                                    Una nueva parada para disfrutar de la misma cocina y ambiente sevillano.
+                                </td>
+                                <td>
+                                    <div class="acciones">
+                                        <button class="btn btn-edit" data-bs-toggle="modal"
+                                            data-bs-target="#modalLocal">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button class="btn btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- MODAL AÑADIR / MODIFICAR LOCAL -->
+    <div class="modal fade" id="modalLocal" tabindex="-1" aria-labelledby="modalLocalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content modal-admin">
+
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modalLocalLabel">Datos del local</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="formLocalAdmin" enctype="multipart/form-data">
+
+                        <div class="row g-3">
+
+                            <div class="col-12 col-md-6">
+                                <label for="tituloLocal" class="form-label">Título del local *</label>
+                                <input type="text" class="form-control" id="tituloLocal"
+                                    placeholder="Ej: Bar Perita San Julián" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="zonaLocal" class="form-label">Zona *</label>
+                                <input type="text" class="form-control" id="zonaLocal"
+                                    placeholder="Ej: Casco Antiguo" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="direccionLocal" class="form-label">Dirección *</label>
+                                <input type="text" class="form-control" id="direccionLocal"
+                                    placeholder="Ej: Plaza de San Julián · Sevilla" required>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <label for="telefonoLocal" class="form-label">Teléfono *</label>
+                                <input type="tel" class="form-control" id="telefonoLocal"
+                                    placeholder="Ej: 600 123 456" required>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <label for="numMesasLocal" class="form-label">Número de mesas *</label>
+                                <input type="number" class="form-control" id="numMesasLocal" min="1"
+                                    placeholder="Ej: 12" required>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <label for="horarioLocal" class="form-label">Horario *</label>
+                                <input type="text" class="form-control" id="horarioLocal"
+                                    placeholder="Ej: Lunes a Domingo: 12:00 – 00:00" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="mapaLocal" class="form-label">URL del mapa *</label>
+                                <input type="url" class="form-control" id="mapaLocal"
+                                    placeholder="https://www.google.com/maps?q=...&output=embed" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="descripcionLocal" class="form-label">Descripción *</label>
+                                <textarea class="form-control" id="descripcionLocal" rows="3"
+                                    placeholder="Breve descripción del local..." required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="fotoLocal" class="form-label">Imagen del local</label>
+                                <input type="file" class="form-control" id="fotoLocal" accept="image/*">
+                                <p class="form-help mb-0 mt-2">
+                                    Formatos recomendados: JPG, PNG o WEBP. Esta imagen se mostrará en las cards públicas.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-admin-light" data-bs-dismiss="modal">
+                        CANCELAR
+                    </button>
+                    <button type="button" class="btn btn-admin">
+                        GUARDAR
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

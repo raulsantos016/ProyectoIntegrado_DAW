@@ -1,0 +1,176 @@
+:root{
+  --perita-blue: #0b4aa2;
+  --perita-blue-dark: #072f66;
+  --perita-white: #ffffff;
+  --perita-success: #2ecc71;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* LOGO */
+.perita-logo{
+  height: 46px;
+}
+
+/* MAIN */
+.confirmacion-main{
+  flex: 1;
+}
+
+.confirmacion-section{
+  min-height: calc(100vh - 140px);
+  background:
+    linear-gradient(rgba(255,255,255,.96), rgba(255,255,255,.96)),
+    url("../images/nosotros.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* CARD */
+.confirmacion-card{
+  max-width: 520px;
+  background: rgba(255,255,255,.98);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+  border: 1px solid rgba(11, 74, 162, .08);
+}
+
+/* ICONO */
+.confirmacion-icon{
+  font-size: 3.5rem;
+  color: var(--perita-success);
+  margin-bottom: 1rem;
+}
+
+/* TITULO */
+.confirmacion-title{
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--perita-blue-dark);
+  margin-bottom: 1rem;
+}
+
+/* TEXTO */
+.confirmacion-text{
+  color: rgba(0,0,0,.7);
+  margin-bottom: 1.5rem;
+}
+
+/* DETALLES */
+.confirmacion-detalles{
+  background: rgba(11, 74, 162, .05);
+  border: 1px solid rgba(11, 74, 162, .12);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.detalle-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  margin-bottom: .6rem;
+  font-size: .95rem;
+}
+
+.detalle-item i{
+  color: var(--perita-blue);
+  margin-right: .5rem;
+}
+
+.detalle-item span{
+  flex: 1;
+  text-align: left;
+}
+
+.detalle-item strong{
+  font-weight: 600;
+}
+
+/* AVISO */
+.confirmacion-aviso{
+  display: flex;
+  gap: .7rem;
+  align-items: flex-start;
+  background: rgba(0,0,0,.04);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: .9rem;
+  color: rgba(0,0,0,.7);
+}
+
+.confirmacion-aviso i{
+  color: var(--perita-blue);
+  margin-top: .2rem;
+}
+
+/* BOTONES */
+.confirmacion-botones{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-perita{
+  border: 0;
+  background: var(--perita-blue);
+  color: var(--perita-white);
+  font-weight: 600;
+  border-radius: 999px;
+  padding: .75rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.btn-perita:hover{
+  background: var(--perita-blue-dark);
+  transform: translateY(-1px);
+}
+
+.btn-perita-outline{
+  border: 2px solid var(--perita-blue);
+  color: var(--perita-blue-dark);
+  background: transparent;
+  border-radius: 999px;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all .2s ease;
+}
+
+.btn-perita-outline:hover{
+  background: rgba(11,74,162,.08);
+}
+
+/* FOOTER */
+.footer-perita{
+  background: var(--perita-blue-dark);
+  color: rgba(255,255,255,0.92);
+  font-size: .95rem;
+}
+
+.admin-link{
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+}
+
+.admin-link:hover{
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px){
+  .confirmacion-card{
+    padding: 2rem 1.5rem;
+  }
+}

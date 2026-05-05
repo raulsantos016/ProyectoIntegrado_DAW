@@ -80,7 +80,7 @@ body{
 .locales-section{
   background:
     linear-gradient(rgba(255,255,255,.96), rgba(255,255,255,.96)),
-    url("../images/nosotros.jpg");
+    url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
 }

@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/reservasAdmin.css" />
+
+    <title>Bar Perita | Administración de reservas</title>
+</head>
+
+<body>
+
+    <main class="admin-page">
+
+        <div class="admin-container">
+
+            <!-- CABECERA -->
+            <header class="admin-header">
+                <div>
+                    <h1 class="admin-title">Gestión de reservas</h1>
+                    <p class="admin-subtitle">
+                        Consulta, añade, modifica o elimina las reservas registradas.
+                    </p>
+                </div>
+
+                <div class="admin-header-actions">
+                    <a href="./panel.html" class="btn btn-admin-light">
+                        <i class="fas fa-arrow-left"></i>
+                        Panel
+                    </a>
+                    <a href="../inicio.html" class="btn btn-admin-outline">
+                        Volver a la web
+                    </a>
+                </div>
+            </header>
+
+            <!-- FILTROS -->
+            <section class="admin-card mb-4">
+                <div class="row g-3 align-items-end">
+
+                    <div class="col-12 col-md-5 col-lg-4">
+                        <label for="fechaFiltro" class="form-label">Filtrar por fecha</label>
+                        <input type="date" id="fechaFiltro" class="form-control" onkeydown="return false">
+                    </div>
+
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <label for="localFiltro" class="form-label">Local</label>
+                        <select id="localFiltro" class="form-select">
+                            <option value="">Todos los locales</option>
+                            <option value="1">Bar Perita San Julián</option>
+                            <option value="2">Bar Perita Triana</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <button type="button" class="btn btn-admin w-100">
+                            FILTRAR
+                        </button>
+                    </div>
+
+                    <div class="col-12 col-lg-3 text-lg-end">
+                        <button type="button" class="btn btn-admin-success w-100 w-lg-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalReserva">
+                            <i class="fas fa-plus"></i>
+                            AÑADIR RESERVA
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- TABLA -->
+            <section class="admin-card">
+                <div class="table-header">
+                    <div>
+                        <h2 class="table-title">Reservas del día</h2>
+                        <p class="table-subtitle mb-0">
+                            Datos de ejemplo. Más adelante se cargarán desde la base de datos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tabla-scroll">
+                    <table class="table reservas-table align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Local</th>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Teléfono</th>
+                                <th>Correo</th>
+                                <th>Fecha</th>
+                                <th>Turno</th>
+                                <th>Hora</th>
+                                <th>Personas</th>
+                                <th>Mesas</th>
+                                <th>Observaciones</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>San Julián</td>
+                                <td>Raúl</td>
+                                <td>García Pérez</td>
+                                <td>600 123 456</td>
+                                <td>raul@email.com</td>
+                                <td>2026-05-10</td>
+                                <td><span class="badge-turno">Comida</span></td>
+                                <td>14:30</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>Terraza si es posible</td>
+                                <td>
+                                    <div class="acciones">
+                                        <button class="btn btn-edit" data-bs-toggle="modal"
+                                            data-bs-target="#modalReserva">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button class="btn btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Triana</td>
+                                <td>Lucía</td>
+                                <td>Moreno</td>
+                                <td>611 222 333</td>
+                                <td>-</td>
+                                <td>2026-05-10</td>
+                                <td><span class="badge-turno">Cena</span></td>
+                                <td>21:30</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>Sin gluten</td>
+                                <td>
+                                    <div class="acciones">
+                                        <button class="btn btn-edit" data-bs-toggle="modal"
+                                            data-bs-target="#modalReserva">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button class="btn btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>San Julián</td>
+                                <td>Carlos</td>
+                                <td>Ruiz</td>
+                                <td>622 444 555</td>
+                                <td>carlos@email.com</td>
+                                <td>2026-05-10</td>
+                                <td><span class="badge-turno">Comida</span></td>
+                                <td>13:30</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>Cumpleaños</td>
+                                <td>
+                                    <div class="acciones">
+                                        <button class="btn btn-edit" data-bs-toggle="modal"
+                                            data-bs-target="#modalReserva">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button class="btn btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- MODAL AÑADIR / MODIFICAR RESERVA -->
+    <div class="modal fade" id="modalReserva" tabindex="-1" aria-labelledby="modalReservaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content modal-admin">
+
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modalReservaLabel">Datos de la reserva</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="formReservaAdmin">
+
+                        <div class="row g-3">
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="localReserva">Local *</label>
+                                <select class="form-select" id="localReserva" required>
+                                    <option value="">Selecciona local</option>
+                                    <option value="1">Bar Perita San Julián</option>
+                                    <option value="2">Bar Perita Triana</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="fechaReserva">Fecha *</label>
+                                <input type="date" class="form-control" id="fechaReserva" onkeydown="return false"
+                                    required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="nombreReserva">Nombre *</label>
+                                <input type="text" class="form-control" id="nombreReserva" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="apellidosReserva">Apellidos</label>
+                                <input type="text" class="form-control" id="apellidosReserva">
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="telefonoReserva">Teléfono *</label>
+                                <input type="tel" class="form-control" id="telefonoReserva" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="correoReserva">Correo</label>
+                                <input type="email" class="form-control" id="correoReserva">
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <label class="form-label" for="turnoReserva">Turno *</label>
+                                <select class="form-select" id="turnoReserva" required>
+                                    <option value="">Turno</option>
+                                    <option value="comida">Comida</option>
+                                    <option value="cena">Cena</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <label class="form-label" for="horaReserva">Hora *</label>
+                                <select class="form-select" id="horaReserva" required>
+                                    <option value="">Hora</option>
+                                    <option>13:00</option>
+                                    <option>13:30</option>
+                                    <option>14:00</option>
+                                    <option>14:30</option>
+                                    <option>15:00</option>
+                                    <option>20:30</option>
+                                    <option>21:00</option>
+                                    <option>21:30</option>
+                                    <option>22:00</option>
+                                    <option>22:30</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <label class="form-label" for="personasReserva">Personas *</label>
+                                <input type="number" class="form-control" id="personasReserva" min="1" required>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <label class="form-label" for="mesasReserva">Mesas ocupadas *</label>
+                                <input type="number" class="form-control" id="mesasReserva" min="1" required>
+                            </div>
+
+                            <div class="col-12 col-md-8">
+                                <label class="form-label" for="observacionesReserva">Observaciones</label>
+                                <input type="text" class="form-control" id="observacionesReserva">
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-admin-light" data-bs-dismiss="modal">
+                        CANCELAR
+                    </button>
+                    <button type="button" class="btn btn-admin">
+                        GUARDAR
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
